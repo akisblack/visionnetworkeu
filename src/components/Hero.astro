@@ -1,5 +1,7 @@
 ---
 import VisionGlasses from '../assets/vna-glasses.svg';
+
+const isHomepage = Astro.url.pathname === "/";
 ---
 
 <div class="hero">
@@ -7,9 +9,11 @@ import VisionGlasses from '../assets/vna-glasses.svg';
         <VisionGlasses class="logo-hero" />
         <h1>Vision Network</h1>
     </div>
-   <div class="back">
-        <slot />
+   {!isHomepage && (
+    <div class="back">
+        <a href="/" class="">Go back</a>
    </div>
+   )}
 </div>
 
 <style>

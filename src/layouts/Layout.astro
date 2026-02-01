@@ -1,3 +1,8 @@
+---
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -9,7 +14,11 @@
 		<title>Vision Network</title>
 	</head>
 	<body>
-		<slot />
+		<div class="contain">
+			<Hero />
+			<slot />
+			<Footer />
+		</div>
 	</body>
 </html>
 
@@ -60,7 +69,7 @@
 	h2 {
 		font-size: 2rem;
 		text-decoration: underline;
-	}
+	}	
 
 	h1, h2, h3 {
 		font-family: "PP Neue Machina", sans-serif;
@@ -70,10 +79,20 @@
 		font-size: 1.3rem;
 	}
 
+	summary {
+		display: block;
+	}
+
 	.contain {
-		width: 80%;
+		width: 80vw;
 		display: flex;
 		flex-direction: column;
 		margin-bottom: 4rem;
+	}
+
+	@media (max-width: 600px) {
+		.contain {
+			width: 95%;
+		}
 	}
 </style>

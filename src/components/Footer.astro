@@ -1,0 +1,67 @@
+---
+import VisionSeperate from '../assets/vision-seperate.png';
+import AstroLogo from "../assets/astro.svg";
+---
+
+
+<footer>
+    <hr />
+    <img src={VisionSeperate.src} alt="Vision Network logo" class="logo-bottom" />
+    <div class="footer-text">
+        <p class="built-by">Website built with <AstroLogo class="astro-logo" width="80" height="auto" />by Akis.</p>
+        <p>Source code available on <a href="https://github.com/akisblack/visionnetworkeu/">GitHub</a></p>
+    </div>
+</footer>
+
+<style>
+    hr {
+        width: 100%;
+        border: 1px solid var(--vision-accent);
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .logo-bottom {
+		display: block;
+        margin-left: 0;
+        margin-right: 0;
+		width: clamp(220px, 35vw, 520px);
+		max-width: 95%;
+		box-sizing: border-box;
+		border-radius: 16px;
+		border: 4px solid var(--vision-accent);
+	}
+    
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .built-by {
+        display: flex;
+        align-items: center;
+    }
+
+    .footer-text {
+        display: flex;
+        flex-direction: row;
+        gap: .2rem;
+    }
+
+    @media (max-width: 770px) {
+        .footer-text {
+            flex-direction: column;
+            margin-top: 1rem;
+        }
+
+        p {
+            margin-block: .5rem;
+        }
+
+        .astro-logo {
+            height: 20px;
+            width: auto;
+        }
+    }
+</style>

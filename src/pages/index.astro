@@ -5,49 +5,31 @@ import Experiences from "../content/experiences.astro";
 import Team from "../content/team.astro";
 import Projects from "../content/projects.astro";
 import Contact from '../content/contact.astro';
-import Hero from "../components/Hero.astro";
-import VisionSeperate from '../assets/vision-seperate.png';
-
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<div class="contain">
-		<Hero />
-		<div class="section">
-			<h2>About us</h2>
-			<About />
-		</div>
-		<div class="section">
-			<h2>Our experiences</h2>
-			<Experiences />
-		</div>
-		<div class="section">
-			<h2>Our team</h2>
-			<Team />
-		</div>
-		<div class="section">
-			<h2>Our projects</h2>
-			<Projects />
-		</div>
-		<div class="section">
-			<h2>Contact us</h2>
-			<Contact />
-		</div>
-
-		<img src={VisionSeperate.src} alt="Vision Network logo" class="logo-bottom" />
+	<p>We are an informal youth group based in Athens, Greece. We aim to connect people through science, art, and non formal education.</p>
+	<div class="section">
+		<About />
+	</div>
+	<div class="section">
+		<Experiences />
+	</div>
+	<div class="section">
+		<Team />
+	</div>
+	<div class="section">
+		<Projects />
+	</div>
+	<div class="section">
+		<Contact />
 	</div>
 </Layout>
 
-<style>
-	.logo-bottom {
-		display: block;
-		margin: 2rem auto 0;
-		width: clamp(220px, 35vw, 520px);
-		max-width: 95%;
-		box-sizing: border-box;
-		border-radius: 16px;
-		border: 4px solid var(--vision-accent);
+<style is:global>
+	.section summary h2 {
+		cursor: pointer;
 	}
 </style>
