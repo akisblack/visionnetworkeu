@@ -3,21 +3,76 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/vision-logo.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Vision Network</title>
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
 
-<style>
+<style is:global>
+
+	@font-face {
+  		font-family: "League Spartan";
+  		src: url("../assets/LeagueSpartan-VariableFont_wght.ttf");
+	}
+
+	@font-face {
+  		font-family: "PP Neue Machina";
+  		src: url("../assets/PPNeueMachina-Regular.ttf");
+	}
+
 	html,
 	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+		--background-color: #000;
+		--vision-accent: #b600ffff;
+		background-color: var(--background-color);
+		color: #fff;
+		font-family: "League Spartan", sans-serif;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	p, li {
+        font-size: 1.3rem;
+        line-height: 1.6;
+        text-align: justify;
+    }
+
+	a {
+		color: var(--vision-accent);
+		text-decoration: underline;
+		font-size: 1.3rem;
+		font-weight: bold;
+	}
+
+	h1 {
+		color: var(--vision-accent);
+		font-size: 3rem;
+		margin-bottom: 1rem;
+	}
+
+	h2 {
+		font-size: 2rem;
+		text-decoration: underline;
+	}
+
+	h1, h2, h3 {
+		font-family: "PP Neue Machina", sans-serif;
+	}
+
+	h3 {
+		font-size: 1.3rem;
+	}
+
+	.contain {
+		width: 80%;
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 4rem;
 	}
 </style>
